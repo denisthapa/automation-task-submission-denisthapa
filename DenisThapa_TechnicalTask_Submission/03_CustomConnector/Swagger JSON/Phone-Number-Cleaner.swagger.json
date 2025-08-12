@@ -1,0 +1,67 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Default title",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "phonecleaner.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/": {},
+    "/clean": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cleanedPhone": {
+                  "type": "string",
+                  "description": "cleanedPhone"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Clean phone number",
+        "operationId": "cleanPhone",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "phone": {
+                  "type": "string",
+                  "description": "phone"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
